@@ -9,7 +9,9 @@ namespace Application.Interfaces
 
     public interface IAIChatService
     {
-        Task<string> AskAsync(string prompt);
+        Task<string> GetResponseAsync(string prompt, string context = "");
+        Task<float[]> GenerateEmbeddingAsync(string prompt);
+
     }
 
 }
